@@ -18,9 +18,9 @@ const Home = () => {
         <Hero />
         <Grid />
         {/* <RecentProjects /> */}
-        {/* <Experience /> */}
+        <Experience />
         {/* <Approach /> */}
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </main>
   );
