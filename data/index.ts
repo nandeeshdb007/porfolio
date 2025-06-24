@@ -228,7 +228,6 @@ export const workExperience = [
       "•	Managing cloud infrastructure on AWS, ensuring secure user authentication with AWS Cognito and Next Auth.",
       "•	Built scalable architecture and reusable component libraries using CSS libraries",
       "•  Wrote comprehensive tests using Jest, Vitest, and React Testing Library to ensure feature stability and code reliability.",
-      "•  Took ownership of existing codebases, troubleshot legacy issues, and shipped new features with minimal handover.",
     ],
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",

@@ -73,7 +73,7 @@ innovation.`,
             cursor={false}
           />
 
-          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10">
+          <div className="w-full grid grid-cols-2 md:flex md:flex-wrap gap-4 md:gap-10">
             <Link
               className=""
               href={"https://github.com/nandeeshdb007"}
