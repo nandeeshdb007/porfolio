@@ -146,10 +146,20 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        "carousel-up": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-33.333%)" },
+        },
+        "carousel-down": {
+          "0%": { transform: "translateY(-33.333%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "carousel-up": "carousel-up 10s linear infinite",
+        "carousel-down": "carousel-down 10s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shimmer: "shimmer 2s linear infinite",
         first: "moveVertical 30s ease infinite",

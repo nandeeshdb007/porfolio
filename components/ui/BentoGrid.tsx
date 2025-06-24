@@ -51,8 +51,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["NextJS", "ReactJS", "Tailwind CSS","Javascript","Typescript","TanStackQuery","Jest","React testing libray"];
-  const rightLists = ["NodeJS", "ExpressJS", "NestJS","MongoDB","Postgres","Redies"];
+  const leftLists = ["NextJS", "ReactJS", "Tailwind CSS"];
+  const rightLists = ["NodeJS", "ExpressJS", "NestJS"];
 
   const [copied, setCopied] = useState(false);
 
@@ -98,8 +98,9 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -130,7 +131,7 @@ export const BentoGridItem = ({
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 ${id==3 ? 'max-w-32 text-center':'max-w-96 lg:text-3xl'}`}
+            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
           >
             {title}
           </div>
@@ -140,7 +141,7 @@ export const BentoGridItem = ({
 
           {/* Tech stack infinite carousel */}
           {id === 3 && (
-            <div className="flex gap-1  lg:gap-5 w-full items-center justify-end absolute right-2">
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               {/* Left column - infinite carousel moving up */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8 h-40 lg:h-60 overflow-hidden">
                 <div className="animate-carousel-up flex flex-col gap-3 md:gap-3 lg:gap-8">
@@ -156,20 +157,22 @@ export const BentoGridItem = ({
                   ))}
                 </div>
               </div>
-              
+
               {/* Right column - infinite carousel moving down */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8 h-40 lg:h-60 overflow-hidden">
                 <div className="animate-carousel-down flex flex-col gap-3 md:gap-3 lg:gap-8">
                   {/* Duplicate the array for seamless loop */}
-                  {[...rightLists, ...rightLists, ...rightLists].map((item, i) => (
-                    <span
-                      key={i}
-                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                  {[...rightLists, ...rightLists, ...rightLists].map(
+                    (item, i) => (
+                      <span
+                        key={i}
+                        className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
                       lg:opacity-100 rounded-lg text-center bg-[#10132E] whitespace-nowrap"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                      >
+                        {item}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -181,8 +184,9 @@ export const BentoGridItem = ({
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />
@@ -199,35 +203,6 @@ export const BentoGridItem = ({
           )}
         </div>
       </div>
-      
-      {/* Add these custom CSS animations to your global CSS or tailwind.config.js */}
-      <style jsx>{`
-        @keyframes carousel-up {
-          0% {
-            transform: translateY(0);
-          }
-          100% {
-            transform: translateY(-33.333%);
-          }
-        }
-        
-        @keyframes carousel-down {
-          0% {
-            transform: translateY(-33.333%);
-          }
-          100% {
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-carousel-up {
-          animation: carousel-up 10s linear infinite;
-        }
-        
-        .animate-carousel-down {
-          animation: carousel-down 10s linear infinite;
-        }
-      `}</style>
     </div>
   );
 };

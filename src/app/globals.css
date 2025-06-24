@@ -83,3 +83,29 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
+@keyframes carousel-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-33.333%);
+  }
+}
+
+@keyframes carousel-down {
+  0% {
+    transform: translateY(-33.333%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-carousel-up {
+  animation: carousel-up 10s linear infinite;
+}
+
+.animate-carousel-down {
+  animation: carousel-down 10s linear infinite;
+}
