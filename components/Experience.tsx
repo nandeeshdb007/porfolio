@@ -9,7 +9,7 @@ const Experience = () => {
         My <span className="text-purple">work experience</span>
       </h1>
 
-      <div className="w-full mt-12 flex h-full items-center justify-center gap-10 lg:flex-row flex-col">
+      <div className="w-full mt-12 flex h-full items-stretch justify-center gap-10 lg:flex-row flex-col">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -21,9 +21,9 @@ const Experience = () => {
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
-            className="flex items-center justify-center h-full text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            className="flex flex-1 items-stretch justify-center text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex items-center flex-col h-full gap-6 p-3 py-6 md:p-5 lg:p-10">
+            <div className="flex flex-col justify-between h-full w-full gap-6 p-3 py-6 md:p-5 lg:p-10">
               <img
                 src={card.thumbnail}
                 alt={card.company}
