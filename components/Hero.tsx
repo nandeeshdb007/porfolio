@@ -109,7 +109,7 @@ innovation.`,
             </Link>
             <Link
               className=""
-              href={"https://tinyurl.com/53uvyndk"}
+              href={"https://lnk.ink/26mgJ"}
               target="_blank"
             >
               <MagicButton
